@@ -1,7 +1,9 @@
 .leftbar {
-    flex: 3.5;
+    flex: 2.5;
     height: calc(100vh - 50px);
     overflow-y: scroll;
+    position: sticky;
+    top: 50px;
 }
 
 ::-webkit-scrollbar{
@@ -51,20 +53,3 @@
     margin: 0;
     list-style: none;
 }
-
-.leftbarFriend{
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-}
-.leftbarFriendImg{
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 10px;
-}
-
-/* .leftbarFriendName{
-    margin-left: 5px;
-} */

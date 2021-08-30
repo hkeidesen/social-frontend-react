@@ -1,6 +1,7 @@
 import './leftbar.css';
 import {RssFeed,PlayCircleFilled, Telegram, Group, Event, Bookmark, HelpOutline, WorkOutline, School} from '@material-ui/icons';
-
+import { Users } from '../../dummyData'
+import CloseFriends from '../closeFriends/CloseFriends';
 export default function Leftbar() {
     return (
         <div className="leftbar">
@@ -72,47 +73,10 @@ export default function Leftbar() {
                 <button className='leftbarButton'>Show more</button>
                 <hr className='leftbarHr'/>
                 <ul className="leftbarFriendList">
-                    <li className="leftbarFriend">
-                        <img className='leftbarFriendImg' src={ 1 == 1 ? '/assets/person/2.jpeg' : 'assets/person/1.jpeg' } alt="" />
-                        <span className='leftbarFriendName'>Ola Nordmann</span>
-                    </li>
-                    <li className="leftbarFriend">
-                        <img className='leftbarFriendImg' src={ 1 == 1 ? '/assets/person/2.jpeg' : 'assets/person/1.jpeg' } alt="" />
-                        <span className='leftbarFriendName'>Ola Nordmann</span>
-                    </li><li className="leftbarFriend">
-                        <img className='leftbarFriendImg' src={ 1 == 1 ? '/assets/person/2.jpeg' : 'assets/person/1.jpeg' } alt="" />
-                        <span className='leftbarFriendName'>Ola Nordmann</span>
-                    </li><li className="leftbarFriend">
-                        <img className='leftbarFriendImg' src={ 1 == 1 ? '/assets/person/2.jpeg' : 'assets/person/1.jpeg' } alt="" />
-                        <span className='leftbarFriendName'>Ola Nordmann</span>
-                    </li><li className="leftbarFriend">
-                        <img className='leftbarFriendImg' src={ 1 == 1 ? '/assets/person/2.jpeg' : 'assets/person/1.jpeg' } alt="" />
-                        <span className='leftbarFriendName'>Ola Nordmann</span>
-                    </li><li className="leftbarFriend">
-                        <img className='leftbarFriendImg' src={ 1 == 1 ? '/assets/person/2.jpeg' : 'assets/person/1.jpeg' } alt="" />
-                        <span className='leftbarFriendName'>Ola Nordmann</span>
-                    </li><li className="leftbarFriend">
-                        <img className='leftbarFriendImg' src={ 1 == 1 ? '/assets/person/2.jpeg' : 'assets/person/1.jpeg' } alt="" />
-                        <span className='leftbarFriendName'>Ola Nordmann</span>
-                    </li><li className="leftbarFriend">
-                        <img className='leftbarFriendImg' src={ 1 == 1 ? '/assets/person/2.jpeg' : 'assets/person/1.jpeg' } alt="" />
-                        <span className='leftbarFriendName'>Ola Nordmann</span>
-                    </li><li className="leftbarFriend">
-                        <img className='leftbarFriendImg' src={ 1 == 1 ? '/assets/person/2.jpeg' : 'assets/person/1.jpeg' } alt="" />
-                        <span className='leftbarFriendName'>Ola Nordmann</span>
-                    </li><li className="leftbarFriend">
-                        <img className='leftbarFriendImg' src={ 1 == 1 ? '/assets/person/2.jpeg' : 'assets/person/1.jpeg' } alt="" />
-                        <span className='leftbarFriendName'>Ola Nordmann</span>
-                    </li><li className="leftbarFriend">
-                        <img className='leftbarFriendImg' src={ 1 == 1 ? '/assets/person/2.jpeg' : 'assets/person/1.jpeg' } alt="" />
-                        <span className='leftbarFriendName'>Ola Nordmann</span>
-                    </li><li className="leftbarFriend">
-                        <img className='leftbarFriendImg' src={ 1 == 1 ? '/assets/person/2.jpeg' : 'assets/person/1.jpeg' } alt="" />
-                        <span className='leftbarFriendName'>Ola Nordmann</span>
-                    </li><li className="leftbarFriend">
-                        <img className='leftbarFriendImg' src={ 1 == 1 ? '/assets/person/2.jpeg' : 'assets/person/1.jpeg' } alt="" />
-                        <span className='leftbarFriendName'>Ola Nordmann</span>
-                    </li>
+                   {Users.map(u=>(
+                       <CloseFriends key={u.id} user={u} />
+                   ))}
+                    
                 </ul>
             </div>
         </div>
